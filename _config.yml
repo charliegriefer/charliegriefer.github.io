@@ -2,6 +2,7 @@ title:            Charlie Griefer
 description:      I'm here to learn clojure and chew bubblegum.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://charliegriefer.github.io
+# url:                http://localhost:4000
 disqus_shortname:
 
 # Owner/author information
