@@ -40,6 +40,8 @@ links:
     url: /about/
   - title: Posts
     url: /posts/
+  - title: RSS
+    url: /feed.xml
 #  - title: Theme Setup
 #    url: /theme-setup/
 #  - title: Made Mistakes
