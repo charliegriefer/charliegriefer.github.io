@@ -15,8 +15,8 @@ owner:
   twitter:        charliegriefer
   facebook:
   github:         charliegriefer
-  stackoverflow:
-  linkedin:
+  stackoverflow:  charliegriefer
+  linkedin:       charliegriefer
   instagram:
   lastfm:
   tumblr:
@@ -42,6 +42,9 @@ links:
     url: /posts/
   - title: RSS
     url: /feed.xml
+  - title: Second Half Charlie
+    url: http://secondhalfcharlie.com
+    external: true
 #  - title: Theme Setup
 #    url: /theme-setup/
 #  - title: Made Mistakes
