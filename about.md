@@ -22,8 +22,8 @@ This should be thrilling.
 
 ## What am I doing here?
 
-I'm a self-taught programmer who spent many years as a Web Developer using Adobe's ColdFusion. Nowadays, I'm trying to learn a bit about functional programming, and [Clojure](http://clojure.org) in particular. I thought if I blogged a bit about my journey, it might help things stick a bit better.\\
-\\
-I have a (now defunct) blog at [http://charlie.griefer.com](http://charlie.griefer.com) that served as both a personal blog and a tech blog, mostly related to ColdFusion and jQuery. For now, I'm leaving it up for posterity. From this point forward, my technical posts will be here.\\
-\\
+I'm a self-taught programmer who spent many years as a Web Developer using Adobe's ColdFusion. Nowadays, I'm trying to learn a bit about functional programming, and [Clojure](http://clojure.org) in particular. I thought if I blogged a bit about my journey, it might help things stick a bit better.
+
+I have a (now defunct) blog at [http://charlie.griefer.com](http://charlie.griefer.com) that served as both a personal blog and a tech blog, mostly related to ColdFusion and jQuery. For now, I'm leaving it up for posterity. From this point forward, my technical posts will be here.
+
 I have a personal blog at [http://www.secondhalfcharlie.com](http://www.secondhalfcharlie.com). Feel free to visit.
