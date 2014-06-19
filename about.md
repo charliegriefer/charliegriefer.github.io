@@ -8,8 +8,6 @@ modified: 5-11-2014
 comments: false
 image:
   feature: canyon_honeycomb.png
-#  credit: Texture Lovers
-#  creditlink: http://texturelovers.com
 ---
 
 This should be thrilling.
