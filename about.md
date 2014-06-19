@@ -5,7 +5,7 @@ title: About Charlie
 tagline: Get to know the man behind the github page
 tags: [about, Charlie Griefer, Clojure, programming]
 modified: 5-11-2014
-comments: true
+comments: false
 image:
   feature: canyon_honeycomb.png
 #  credit: Texture Lovers
