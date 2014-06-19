@@ -2,7 +2,6 @@ title:            Charlie Griefer
 description:      I'm here to learn clojure and chew bubblegum.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://charliegriefer.github.io
-# url:                http://localhost:4000
 disqus_shortname:   charliegriefer-github-io
 
 # Owner/author information
@@ -45,11 +44,6 @@ links:
   - title: Second Half Charlie
     url: http://secondhalfcharlie.com
     external: true
-#  - title: Theme Setup
-#    url: /theme-setup/
-#  - title: Made Mistakes
-#    url: http://mademistakes.com
-#    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Phoenix
