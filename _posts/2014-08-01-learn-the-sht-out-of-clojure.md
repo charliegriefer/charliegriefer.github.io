@@ -2,7 +2,7 @@
 layout: post
 title: August is "Learn the Shit out of Clojure" Month
 description: 
-modified: 2014-08-01
+
 tags: [clojure, programming]
 comments: true
 ---

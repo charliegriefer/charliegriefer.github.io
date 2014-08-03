@@ -2,7 +2,7 @@
 layout: post
 title: Hello World
 description: "My first Jekyll post."
-modified: 2014-06-16
+
 tags: [jekyll, hello world, programming]
 comments: true
 ---
