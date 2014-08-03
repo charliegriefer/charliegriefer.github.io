@@ -29,7 +29,7 @@ kramdown:
 # Site owner
 owner:
   name: Charlie Griefer
-  avatar: bio-photo.jpg
+  avatar: bio-photo.png
   bio: "Describe your self."
   email: charlie@griefer.com
   disqus-shortname: charliegriefer-github-io 
