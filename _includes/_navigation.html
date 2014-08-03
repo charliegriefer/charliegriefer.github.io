@@ -1,18 +1,26 @@
 <div class="navigation-wrapper">
-	<div class="site-name">
-		<a href="{{ site.url }}">{{ site.title }}</a>
-	</div><!-- /.site-name -->
-	<div class="top-navigation">
-		<nav role="navigation" id="site-nav" class="nav">
-		    <ul>
-		        {% for link in site.data.navigation %}
-					    {% if link.url contains 'http' %}
-					        {% assign domain = '' %}
-					        {% else %}
-					        {% assign domain = site.url %}
-					    {% endif %}
-					    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }} {% if link.title == "RSS" %}<i class="fa fa-rss"></i>{% elsif link.url contains "http:" %}<i class="fa fa-external-link"></i>{% endif %}</a></li>
-					  {% endfor %}
+    <div class="site-name">
+        <a href="{{ site.url }}">{{ site.title }}</a>
+    </div><!-- /.site-name -->
+    <div class="top-navigation">
+        <nav role="navigation" id="site-nav" class="nav">
+            <ul>
+                {% for link in site.data.navigation %}
+                    {% if link.url contains 'http' %}
+                        {% assign domain = '' %}
+                    {% else %}
+                        {% assign domain = site.url %}
+                    {% endif %}
+                    
+                    {% if link.title == "RSS" %}
+                        {% assign fa-icon = 'fa fa-rss' %}
+                    {% elsif link.url contains 'http' %}
+                        {% assign fa-icon = 'fa fa-external-link' %}
+                    {% else %}
+                        {% assign fa-icon = '' %}
+                    {% endif %}
+                    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }} <i class="{{ fa-icon }}"></i></a></li>
+                {% endfor %}
 		    </ul>
 		</nav>
 	</div><!-- /.top-navigation -->
