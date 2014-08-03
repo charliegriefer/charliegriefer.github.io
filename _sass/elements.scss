@@ -113,6 +113,10 @@ svg:not(:root) {
     color: $info;
   }
 }
+.btn-tweet {
+  @include font-rem(12); font-weight:100; padding:8px 20px;
+}
+.btn-tweet i { color:#55ACEE; margin-right:6px; }
 /* Well ================================================= */
 .well {
 	min-height: 20px;
