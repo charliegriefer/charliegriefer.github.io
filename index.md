@@ -1,9 +1,7 @@
 ---
 layout: home
 excerpt: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+tags: [Charlie Griefer, Clojure, programming, Functional Programming]
 image:
-  feature: texture-feature-01.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: clojure_honeycomb.png
 ---
