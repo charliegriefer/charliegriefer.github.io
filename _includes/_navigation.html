@@ -5,6 +5,7 @@
     <div class="top-navigation">
         <nav role="navigation" id="site-nav" class="nav">
             <ul>
+                <li><a href="/"><i class="fa fa-home"></i></a></li>
                 {% for link in site.data.navigation %}
                     {% if link.url contains 'http' %}
                         {% assign domain = '' %}
