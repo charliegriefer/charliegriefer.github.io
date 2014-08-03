@@ -41,6 +41,7 @@ owner:
     verify: 
     ad-client: 
     ad-slot: 
+    show-google-ads: false
   bing-verify: 
   github: charliegriefer
   stackoverflow: charliegriefer
