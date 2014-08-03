@@ -12,6 +12,7 @@ body {
 	@include clearfix;
 }
 .site-name {
+  color: #4665A5;
 	@include grid(12,10);
 	@include prefix(12,1);
 	@include suffix(12,1);
@@ -30,6 +31,17 @@ body {
 		@include prefix(12,2);
 	}
 }
+.site-name a {
+  color: #4665A5;
+  &:visited {
+    color: #4665A5;
+  }
+  &:hover {
+    color: #A9CFD1;
+  }
+}
+
+
 .top-navigation {
 	@include grid(12,10);
 	@include prefix(12,1);
