@@ -51,7 +51,7 @@
         </div>
         <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
 
-        <a href="https://twitter.com/intent/tweet?text={{ page.title | truncate: 80 | append: ' ' | append: site.url | append: site.baseurl | append: page.url | uri_escape }}" target="tweetThis2666" onclick="window.open( this.href, 'tweetThis2666', 'width=600,height=425' ).focus()" class="btn btn-info btn-tweet"><i class="fa fa-twitter"></i>Tweet This</a>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | truncate: 80 | append: ' ' | append: site.url | append: site.baseurl | append: page.url | uri_escape }}" target="tweetThis" onclick="window.open( this.href, 'tweetThis', 'width=600,height=425' ).focus()" class="btn btn-info btn-tweet"><i class="fa fa-twitter"></i>Tweet This</a>
       </footer>
     </div><!-- /.article-wrap -->
   {% if site.owner.disqus-shortname and page.comments == true %}
