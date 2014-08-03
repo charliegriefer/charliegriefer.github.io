@@ -1,14 +1,16 @@
 # Site wide configuration
 
-title:            Site Title
-locale:           en_US
-url:              http://localhost:4000
+title: Functionally Numb
+locale: en_US
+url: http://localhost:4000
+# url: http://charliegriefer.github.io
 
 
 # Jekyll configuration
 
-permalink:   /:categories/:title/
-markdown:    kramdown
+# permalink: /:categories/:title/
+permalink: pretty
+markdown: kramdown
 highlighter: pygments
 sass:
   sass_dir: _sass
@@ -26,23 +28,23 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: Charlie Griefer
   avatar: bio-photo.jpg
   bio: "Describe your self."
-  email: 
-  disqus-shortname: 
-  twitter: 
+  email: charlie@griefer.com
+  disqus-shortname: charliegriefer-github-io 
+  twitter: charliegriefer
   facebook: 
   google:
     plus: 
-    analytics: 
+    analytics: UA-53448619-1
     verify: 
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: 
-  stackoverflow:
-  linkedin:
+  github: charliegriefer
+  stackoverflow: charliegriefer
+  linkedin: charliegriefer
   instagram: 
   lastfm:
   tumblr:
