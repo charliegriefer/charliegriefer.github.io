@@ -11,7 +11,7 @@
 					        {% else %}
 					        {% assign domain = site.url %}
 					    {% endif %}
-					    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+					    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }} {% if link.title == "RSS" %}<i class="fa fa-rss"></i>{% elsif link.url contains "http:" %}<i class="fa fa-external-link"></i>{% endif %}</a></li>
 					  {% endfor %}
 		    </ul>
 		</nav>
