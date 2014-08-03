@@ -1,6 +1,6 @@
 ---
 layout: post
-title: August is &#34;Learn the Shit out of Clojure&#34; Month
+title: August is "Learn the Shit out of Clojure" Month
 description: 
 
 tags: [clojure, programming]
