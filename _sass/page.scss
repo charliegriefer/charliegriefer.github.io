@@ -263,23 +263,6 @@ $button-size: 1.5rem;
 .image-wrap {
 	position: relative;
 	margin-bottom: 2em;
-	&:after {
-		content: " ";
-		display: block;
-		position: absolute;
-		bottom: -1px;
-		left: 8%;
-		width: 0;
-		height: 0;
-		border: 20px solid transparent;
-		border-bottom-color: $bodycolor;
-		@media #{$small} {
-			left: 25%;
-		}
-		@media #{$x-large} {
-			left: 33.333333333%;
-		}
-	}
 	img {
 		width: 100%;
 		height: auto;
