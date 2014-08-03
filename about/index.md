@@ -5,7 +5,7 @@ tags: [about, Charlie Griefer, Clojure, programming, Functional Programming]
 modified: 5-11-2014
 comments: false
 image:
-  feature: canyon_honeycomb.png
+  feature: clojure_honeycomb.png
 ---
 
 This should be thrilling.
