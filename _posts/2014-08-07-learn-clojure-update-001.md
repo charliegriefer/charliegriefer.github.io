@@ -112,6 +112,14 @@ Really it's just something for me, to hold me accountable. But hey if you're her
 - Same with maps being functions of their keys, and keywords being functions.
 - Starting to click about data being immutable:
 
+{% highlight css %}
+#container {
+  float: left;
+  margin: 0 -240px 0 0;
+  width: 100%;
+}
+{% endhighlight %}
+
 - In the code above, the `(assoc)` didn't modify __song__. It was output and then it was gone. I could have bound it to another variable (?), or even to __song__ again. Still would not have overwritten song, but would have created a new binding that happened to have the same name as the previous binding. In this context/environment, the initial binding to __song__ would no longer be accessible.
 
 That's it for Chapters 1 - 3. Over the weekend I'll dig into Chapter 4: Functional Programming, which I'm very much looking forward to. Once I get through chapter 6, I'll post the next update. 
