@@ -115,7 +115,7 @@ Really it's just something for me, to hold me accountable. But hey if you're her
 user=> (def song {:name "Agnus Dei"
            :artist "Krzysztof Penderecki"
            :album "Polish Requiem"
-           :genre ​"Classical"})
+           :genre "Classical"})
 user=> (assoc song :kind "MPEG Audio File")
 user=> song {:genre "Classical", :name "Agnus Dei", :artist "Kryzsztof Penderecki", :album "Polish Requiem"}
 {% endhighlight %}
