@@ -111,7 +111,7 @@ Really it's just something for me, to hold me accountable. But hey if you're her
 - Vectors themselves being functions is interesting. `([:a :b :c] 2)` as opposed to `(get [:a :b :c] 2)`. Nice.
 - Same with maps being functions of their keys, and keywords being functions.
 - Starting to click about data being immutable:
-{% highlight css %}
+{% highlight clojure %}
 user=> (def song {:name "Agnus Dei"
            :artist "Krzysztof Penderecki"
            :album "Polish Requiem"
