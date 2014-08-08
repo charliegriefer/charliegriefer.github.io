@@ -28,7 +28,7 @@ Really it's just something for me, to hold me accountable. But hey if you're her
 
 - Explains libraries and namespaces. using [__require__](http://clojuredocs.org/clojure_core/clojure.core/require). quoting the library name ([__quot__](http://clojuredocs.org/clojure_core/clojure.core/quot) covered later)
 - needed to download code and fire up new REPL from proper location in order to require `'examples.introduction`.
-- require-ing a library still means you have to refer to items in the library with a _namespace-qualified_ name. 
+- `require`-ing a library still means you have to refer to items in the library with a _namespace-qualified_ name. 
 - [__refer__](http://clojuredocs.org/clojure_core/clojure.core/refer) creates mappings for all of the names in the current namespace
 - can't refer without require (?)
 - [__use__](http://clojuredocs.org/clojure_core/clojure.core/use) does both __require__ and __refer__ in a single step
