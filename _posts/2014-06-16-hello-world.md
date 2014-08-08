@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello World
+title: Hello, World
 description: "My first Jekyll post."
 
 tags: [jekyll, hello world, programming]
