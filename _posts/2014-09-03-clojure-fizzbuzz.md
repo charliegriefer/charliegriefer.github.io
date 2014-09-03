@@ -125,9 +125,9 @@ buzz
 nil nil nil nil nil)
     {% endraw %}
 
-Notice that after the number 32 is output, I get 31 `nil` values output. That pattern repeats itself after 64 as well. I assume it's the function actually returning `nil`. Although I don't know why it every 32nd time. Something to do with how Clojure processes sequences in chunks?
+Notice that after the number 32 is output, I get 31 `nil` values output. That pattern repeats itself. It occurs after 64 and after 96 as well. It must be the function actually returning `nil`. Although I don't know why it's every 32nd time. Something to do with how Clojure processes sequences in chunks?
 
-Also, while this mostly worked, I felt like the anonymous function in `(map)` was much too busy. I wanted to clean it up a bit. So I abastracted out some of the functionality into three new helper functions.
+Also, while this mostly worked, I felt like the anonymous function in `(map)` was much too busy. I wanted to clean it up a bit. So I abastracted out some of the functionality into three new helper functions:
 
     {% highlight Clojure %}
 (defn fizz? [n] (= 0 (rem n 3)))
@@ -135,7 +135,7 @@ Also, while this mostly worked, I felt like the anonymous function in `(map)` wa
 (defn fizzbuzz? [n] (and (fizz? n) (buzz? n)))
     {% endhighlight %}
 
-My `(fizzbuzz)` function now looked like this:
+And the updated `(fizzbuzz)` function:
 
     {% highlight Clojure %}
 (defn fizzbuzz []
@@ -143,7 +143,7 @@ My `(fizzbuzz)` function now looked like this:
     (map #(cond (fizzbuzz? %) (println "fizzbuzz") (fizz? %) (println "fizz") (buzz? %) (println "buzz") :else (println %)) nums)))
     {% endhighlight %}
 
-That's not really any cleaner now, is it? And I still have all of those `nil` values being output. But focusing on cleaning up the function. As far as I can tell, it's going to need to test 3 conditions. That may just be too much for an anonymous inline function. So I pulled that out as well, and was now at:
+Not only do I still have all of those `nil` values being output, but that's not really any cleaner now, is it? In thinking about cleaning it up further, I realize that I'm going to need to test 3 conditions. That may just be too much for an anonymous inline function. So I pulled that out as well:
 
     {% highlight Clojure %}
 (defn fizz? [n] (= 0 (rem n 3)))
@@ -164,9 +164,7 @@ That's not really any cleaner now, is it? And I still have all of those `nil` va
 
 That's definitely a much cleaner-looking `(fizzbuzz)` function. But my output still has all of those `nil` values.
 
-That's when I realized that there was absolutely no reason for using `(println)`. I'm running into issues because the functions are returning `nil`. So just have the functions return the actual value instead of using `(println)`.
-
-I updated the `(fb)` function to:
+That's when I realized that there was absolutely no reason for using `(println)`. I'm running into issues because the functions aren't returning the numeric or "fizz"/"buzz"/"fizzbuzz" values. They're _printing_ the values and then returning `nil`. So I need to _return_ the appropriate values:
 
     {% highlight Clojure %}
 (defn fb [n]
@@ -177,7 +175,7 @@ I updated the `(fb)` function to:
    :else n))
     {% endhighlight %}
 
-The full fizz buzz implementation (also available as a [Gist](https://gist.github.com/charliegriefer/9fb301f499f22360b0a7)):
+The final full Fizz Buzz implementation (also available as a [Gist](https://gist.github.com/charliegriefer/9fb301f499f22360b0a7)):
 
     {% highlight Clojure %}
 (defn fizz? [n] (= 0 (rem n 3)))
@@ -195,7 +193,7 @@ The full fizz buzz implementation (also available as a [Gist](https://gist.githu
   (map fb (range 1 101)))
     {% endhighlight %}
 
-The only other change above is that I removed the `(let)` binding from the `(fizzbuzz)` function. I added it initially because there was so much noise in the anonymous function that I thought it would help. But now that I've extracted everything out into separate functions, there was no need for the `let`, and the code is cleaner without.
+The only other change above is that I removed the `(let)` binding from the `(fizzbuzz)` function. I added it initially because there was so much noise in the anonymous function that I thought it would help declutter the `(map)`. But now that I've extracted everything out into separate functions, there was no need for the `let`, and the code is cleaner without it.
 
 I'm not sure how "good" this is yet. I've not yet looked at other Clojure Fizz Buzz implementations. A couple of things that I thought about:
 
