@@ -19,7 +19,7 @@ At first, I wanted to be concise. I came up with the following:
     (map #(cond (and (= 0 (rem % 3)) (= 0 (rem % 5))) (println "fizzbuzz") (= 0 (rem % 3)) (println "fizz") (= 0 (rem % 5)) (println "buzz") :else (println %)) nums)))
     {% endhighlight %}
 
-Well, that worked. Mostly. The output looked something like this:
+Well, that worked. Mostly. The output looked like this:
 
     {% raw %}
     (1
