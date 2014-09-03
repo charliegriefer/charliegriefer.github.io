@@ -127,7 +127,7 @@ nil nil nil nil nil)
 
 Notice that after the number 32 is output, I get 31 `nil` values output. That pattern repeats itself. It occurs after 64 and after 96 as well. It must be the function actually returning `nil`. Although I don't know why it's every 32nd time. Something to do with how Clojure processes sequences in chunks?
 
-Also, while this mostly worked, I felt like the anonymous function in `(map)` was much too busy. I wanted to clean it up a bit. So I abastracted out some of the functionality into three new helper functions:
+Also, while this mostly worked, I felt like the anonymous function in `(map)` was much too busy. I wanted to clean it up a bit. So I abstracted out some of the functionality into three new helper functions:
 
     {% highlight Clojure %}
 (defn fizz? [n] (= 0 (rem n 3)))
