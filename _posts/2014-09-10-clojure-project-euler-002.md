@@ -80,7 +80,7 @@ The rest of the `(fib)` function is pretty straightforward. We only need the _fi
 With that in place, the solution isn't too far removed from the solution I used for [Problem 1](/2014/09/10-clojure-project-euler-001). Filter out the even values under four million:
 
 {% highlight Clojure %}
-(filter #(and (< % 4000000) (even? %)) coll)
+(filter #(and (even? %) (< % 4000000)) coll)
 {% endhighlight %}
 
 ...and sum them using `(apply +)`.
@@ -90,7 +90,7 @@ The final implementation (also available as a [Gist](https://gist.github.com/cha
 {% highlight Clojure %}
 (def fibs (map first (iterate (fn [[a b]] [b (+ a b)]) [1 2])))
 
-(apply + (filter #(and (< % 4000000) (even? %)) fibs))
+(apply + (filter #(and (even? %) (< % 4000000)) fibs))
 
 ;; => 4613732
 {% endhighlight %}
