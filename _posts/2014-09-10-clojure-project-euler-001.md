@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Project Euler: Problem 1"
+title: "Project Euler: Problem 1 in Clojure"
 description: "My attempt at solving Project Euler's problem #1 using Clojure"
 
 tags: [clojure, programming, project euler]
