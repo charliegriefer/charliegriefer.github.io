@@ -7,9 +7,13 @@ tags: [clojure, programming, project euler]
 comments: true
 ---
 
-**Multiples of 3 and 5**  
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.  
+<p>
+<b>Multiples of 3 and 5</b>
+<br /><br />
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+<br /><br />
 Find the sum of all the multiples of 3 or 5 below 1000.
+</p>
 {: .notice}
 
 From my [Fizz Buzz in Clojure](/2014/09/03/clojure-fizzbuzz/) post, I knew that getting the range of numbers below 1000 was as easy as
