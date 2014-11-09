@@ -112,5 +112,5 @@ All of which finally leads to:
 (def series [100 300 100 50 50 50 50 50 500 200 100])
 (def threshold 500)
 
-(get-subseries series threshold) ;;[100 50 50 50 50 50]
+(get-subseries series threshold) ;; [100 50 50 50 50 50]
 {% endhighlight %}
