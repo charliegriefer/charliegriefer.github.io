@@ -12,6 +12,7 @@
 {% endif %}
 <!-- Open Graph -->
 <meta property="og:locale" content="{{ site.locale }}">
+<meta name="og:image" content="{{ site.url }}/images/bio-photo.png">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{% if page.title %}{{ page.title | replace, '"', "'" }}{% else %}{{ site.title }}{% endif %}">
 {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html }}">{% endif %}
