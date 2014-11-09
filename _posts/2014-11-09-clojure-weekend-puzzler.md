@@ -91,8 +91,9 @@ At this point, I think it's easy enough to explain the solution in its entirety.
                                                            (reductions + series))))
             counts (map-rest get-count-until-threshold s)
             max-num (apply max counts)
-            max-index (.indexOf counts max-num)]
-       (subvec s max-index (+ max-index max-num)))))
+            start-index (.indexOf counts max-num)
+            end-index (+ start-index max-num)]
+       (subvec s start-index end-index))))
 {% endhighlight %}
 
 `(get-subseries)` takes a sequence (the original array) and a threshold. If the array is empty, simply return an empty vector. Otherwise...
@@ -100,11 +101,12 @@ At this point, I think it's easy enough to explain the solution in its entirety.
 1. Define a function-local _function_ named `(get-count-until-threshold)`. This is the first issue that I discussed above. The function takes a series, and returns the count of reductions that it took to reach the threshold while applying `+` to the series.
 2. Define a function-local _variable_ `counts` that calls `(map-rest)` (discussed above) passing the function described in item #1 above, and the vector. Given the series `[100 300 100 50 50 50 50 50 500 200 100]` and the threshold `500`, `counts` becomes `(3 4 6 5 4 3 2 1 1 2 1)`. I now know that the longest sequence that does not sum to more than 500 is 6 elements long.
 3. Use Clojure's built-in [`(max)`](https://clojuredocs.org/clojure.core/max) function in conjunction with [`(apply)`](https://clojuredocs.org/clojure.core/apply) in order to determine the longest sequence that meets our requirements. (The need for `(apply)` here is actually explained in [an example on `(apply)`'s docs page](https://clojuredocs.org/clojure.core/apply#example_542692cdc026201cdc326d49)).
-4. A bit of Java interop makes use of `.indexOf` to determine where in the sequence the max number resides. 
-5. With the let-bindings done, use [`(subvec)`](https://clojuredocs.org/clojure.core/subvec) to return the solution. `(subvec)`, in this case, takes 3 arguments: _v_, _start_, and _end_:
+4. A bit of Java interop makes use of Java's `.indexOf` to determine where in the sequence the max number resides. This will be the `start-index` of the vector returned as the solution.
+5. Knowing the `start-index`, we use `max-num` to know where the `end-index` will be. Adding the two together gives me the `end-index`.
+6. With the let-bindings done, use [`(subvec)`](https://clojuredocs.org/clojure.core/subvec) to return the solution. `(subvec)`, in this case, takes 3 arguments: _v_, _start_, and _end_:
 - _v_: An existing vector. In this case, the original series/vector.
-- _start_: This is what I defined as `max-index`. It's the element in the vector from which the longest series was generated before exceeding the specified threshold.
-- _end_: An optional argument to `(subvec)`. In this case I start at `max-index`, and end at `max-index` + `max-num`. Or in Clojure syntax, `(+ max-index max-num)`.
+- _start_: The index at which to start. This is what I defined as `start-index` above.
+- _end_: An optional argument to `(subvec)`. The index at which to end. This is what I defined as `end-index` above.
 
 All of which finally leads to:
 
