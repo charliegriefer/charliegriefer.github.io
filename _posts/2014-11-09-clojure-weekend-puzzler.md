@@ -85,7 +85,7 @@ At this point, I think it's easy enough to explain the solution in its entirety.
    which - in total - are equal-to or less than the threshold."
   [s t]
   (if (empty? s)
-      []
+      s
       (let [get-count-until-threshold (fn [series] 
                                         (count (take-while (partial >= t)
                                                            (reductions + series))))
@@ -96,7 +96,7 @@ At this point, I think it's easy enough to explain the solution in its entirety.
        (subvec s start-index end-index))))
 {% endhighlight %}
 
-`(get-subseries)` takes a sequence (the original array) and a threshold. If the array is empty, simply return an empty vector. Otherwise...
+`(get-subseries)` takes a sequence (the original array) and a threshold. If the array is empty, simply return the empty vector. Otherwise...
 
 1. Define a function-local _function_ named `(get-count-until-threshold)`. This is the first issue that I discussed above. The function takes a series, and returns the count of reductions that it took to reach the threshold while applying `+` to the series.
 2. Define a function-local _variable_ `counts` that calls `(map-rest)` (discussed above) passing the function described in item #1 above, and the vector. Given the series `[100 300 100 50 50 50 50 50 500 200 100]` and the threshold `500`, `counts` becomes `(3 4 6 5 4 3 2 1 1 2 1)`. I now know that the longest sequence that does not sum to more than 500 is 6 elements long.
