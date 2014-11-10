@@ -54,7 +54,7 @@ Progress. Now I know that it took 3 reductions of `(+)` across `series` before t
 
 {% highlight Clojure %}(count (take-while (partial >= threshold) (reductions + series))) ;; 3 {% endhighlight %}
 
-Before going any further, let's discuss the use of [`(partial)`](https://clojuredocs.org/clojure.core/partial) in the code above. `(partial`) takes a function and fewer than normal arguments to that function. Remember that in Clojure, everything is a function. `[(>=)](https://clojuredocs.org/clojure.core/%3E=)` is a function that generally expects 2 characters.
+Before going any further, let's discuss the use of [`(partial)`](https://clojuredocs.org/clojure.core/partial) in the code above. `(partial)` takes a function and fewer than normal arguments to that function. Remember that in Clojure, everything is a function. `[(>=)](https://clojuredocs.org/clojure.core/%3E=)` is a function that generally expects 2 characters.
 
 {% highlight Clojure %}
 (>= 10 20) ;; false
