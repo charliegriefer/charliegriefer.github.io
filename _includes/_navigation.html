@@ -15,12 +15,14 @@
                     
                     {% if link.title == "RSS" %}
                         {% assign fa-icon = 'fa fa-rss' %}
+                    {% elsif link.title == "Contact" %}
+                        {% assign fa-icon = 'fa fa-envelope-o' %}
                     {% elsif link.url contains 'http' %}
                         {% assign fa-icon = 'fa fa-external-link' %}
                     {% else %}
                         {% assign fa-icon = '' %}
                     {% endif %}
-                    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }} <i class="{{ fa-icon }}"></i></a></li>
+                    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{% if link.title != "RSS" and link.title != "Contact" %}{{ link.title }} {% endif %}<i class="{{ fa-icon }}"></i></a></li>
                 {% endfor %}
 		    </ul>
 		</nav>
