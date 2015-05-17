@@ -15,6 +15,7 @@ This should be thrilling.
 * I have three amazing children who often make me very proud, and often make me very frustrated. Sometimes both at the same time.
 * I work for [World Singles](http://www.worldsingles.com) as a Senior Software Engineeer. It is my dream job for a myriad of reasons.
 * I <a href="http://www.amazon.com/gp/product/B00C26IZNE/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00C26IZNE&linkCode=as2&tag=charlgrief-20&linkId=NPXXTJPCOPZ3RCPR">wrote a book</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=charlgrief-20&l=as2&o=1&a=B00C26IZNE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. It's not a big book, but it is a book, and I wrote it. My mom refers to me as "my son the author" amongst her mahjong group.  
+* When I'm not in front of the computer, I'm practicing [Krav Maga](http://en.wikipedia.org/wiki/Krav_Maga) at [R.E.A.C.T. Defense Systems](http://www.reactdefense.com) in Glendale. It has been life changing.
 
 ## What am I doing here?
 
