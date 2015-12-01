@@ -73,7 +73,7 @@ With that, I just needed to see how many reductions it took before I encountered
 
 The `(take-while)` above returns the sequence of numbers that it took until the predicate function returns false. Then the solution to part 2 can be obtained with a simple [(count)](https://clojuredocs.org/clojure.core/count) over that collection.
 
-Putting it all together, once again using the thred-last macro:
+Putting it all together, once again using the thread-last macro:
 
 {% highlight Clojure %}
 (->> parens
