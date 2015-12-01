@@ -26,13 +26,27 @@ My first step was to assign the string of parens to a name.
 ;; there are 7000 parens in the string, so it's shortened a bit here.
 {% endhighlight %}
 
+Working with a string in Clojure isn't nearly as easy as working with a collection. I can use [(seq)](https://clojuredocs.org/clojure.core/seq) to convert that string to a collection. In this case, a collection of characters:
+
+{% highlight Clojure %}
+(seq "((((()(()(((((((()))(((()((((()())(())()(((()((((((()((()(()(((()(()((())))()((()()())))))))))()((((((())((()...")
+
+=> (\( \( \( \( \( \) \( \( \) \( \( \( \( \( \( \( \( \) \) \) \( \( \( \( \) \( \( \( \( \( \) \( \) \) \( \( \) \) \( \) \( \( \( \( \) \( \( \( \( \( \( \( \) \( \( \( \) \( \( \) \( \( \( \( \) \( \( \) \( \( \( \) \) \) \) \( \) \( \( \( \) \( \) \( \) \) \) \) \) \) \) \) \) \) \( \) \( \( \( \( \( \( \( \) \) \( \( \( \))
+{% endhighlight %}
+
+So I'll update that `parens` binding:
+
+{% highlight Clojure %}
+(def parens (seq "((((()(()(((((((()))(((()((((()())(())()(((()((((((()((()(()(((()(()((())))()((()()())))))))))()((((((())((()..."
+;; there are 7000 parens in the string, so it's shortened a bit here.
+{% endhighlight %}
+
 Since each opening paren represents going _up_, and each closing paren represents going _down_, I replaced the parens with _1_ or _-1_ accordingly:
 
 {% highlight Clojure %}
-(map #(if (= \( %) 1 -1) (seq parens))
+(map #(if (= \( %) 1 -1) parens)
 {% endhighlight %}
 
-Calling `(seq)` on the string `parens` converts the string to a collection, where each element in the string is converted to a character. The result (again, shortened) is:
 
 {% highlight Clojure %}
 (1 1 1 1 1 -1 1 1 -1 1 1 1 1 1 1 1 1 -1 -1 -1 1 1 1 1 -1 1 1 1 1 1 -1 1 -1 -1 1 1 -1 -1 1 -1 1 1 1 1 -1 1 1 1 1 ... 
@@ -44,7 +58,6 @@ Using the [thread-last macro](https://clojuredocs.org/clojure.core/-%3E%3E) to p
 
 {% highlight Clojure %}
 (->> parens 
-     seq 
      (map #(if (= \( %) 1 -1)) 
      (apply +))
     
@@ -77,7 +90,6 @@ Putting it all together, once again using the thread-last macro:
 
 {% highlight Clojure %}
 (->> parens
-     seq
      (map #(if (= \( %) 1 -1))
      (reductions +)
      (take-while (partial <= -1))
