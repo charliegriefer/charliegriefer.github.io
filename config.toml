@@ -1,6 +1,6 @@
 baseurl = "http://localhost:1313/"
 languageCode = "en-us"
-title = "Going the Distance"
+title = "Going := the Distance"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
@@ -9,9 +9,9 @@ googleAnalytics = ""
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
-    description          = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"
+    description          = "Wherein I endeavor to learn the Go programming language. Watch and laugh. Watch and learn."
     # This will appear on the top left of the navigation bar
-    navbarTitle          = "Going the Distance"
+    navbarTitle          = "Going := The Distance"
     # Social media buttons that appear on the sidebar
     socialAppearAtTop    = true
     socialAppearAtBottom = true
@@ -41,16 +41,9 @@ googleAnalytics = ""
 # parms.intro will appear on the sidebar
 # This is optional, but it's suggested to use
 [params.intro]
-    header    = "Going the Distance"
-
-    paragraph = "<em>\"There are two ways to write error-free programs; only the third one works.\"</em> - Alan Perlis"
-    # Software and cathedrals are much the same – first we build them, then we pray. - Sam Redwine
-    # I Hate Programming. I Hate Programming. I Hate Programming. It works! I Love Programming.
-    # The trouble with programmers is that you can never tell what a programmer is doing until it’s too late. - Seymour Cray
-    # Success consists of going from failure to failure without loss of enthusiasm - Winston Churchill
-    # Hofstadter's Law: It always takes longer than you expect, even when you take into account Hofstadter's Law.
-
-    about     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
+    header    = "Going := The Distance"
+    paragraph = "<em>\"Going in one more round when you don't think you can - that's what makes all the difference in your life\"</em> - Rocky Balboa"
+    about     = "\"We have two lives, and the second begins when we realize we only have one.\" - Confucius"
 
 # This will also appear on the sidebar.
 # A width of less than 100px is recommended
@@ -62,7 +55,7 @@ googleAnalytics = ""
     circle    = true
     imperfect = false
     width     = ""
-    alt       = "Hugo Future Imperfect"
+    alt       = "Charlie Griefer"
 
 # Adjust the amount of recent posts on the sidebar.
 # This is optional. The default value 5 will be used
