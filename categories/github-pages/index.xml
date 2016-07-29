@@ -11,10 +11,10 @@
     
     <item>
       <title>Hugo on Github Pages</title>
-      <link>http://charliegriefer.github.io/2016/07/29/hugo-on-github-pages/</link>
+      <link>http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/</link>
       <pubDate>Fri, 29 Jul 2016 19:11:09 -0700</pubDate>
       
-      <guid>http://charliegriefer.github.io/2016/07/29/hugo-on-github-pages/</guid>
+      <guid>http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/</guid>
       <description>
 
 &lt;h2 id=&#34;hugo-on-github-pages&#34;&gt;Hugo on Github Pages&lt;/h2&gt;
@@ -47,6 +47,9 @@ on the idea. The notion of a simple, static blog as opposed to the (&lt;em&gt;wa
 &lt;pre&gt;&lt;code&gt;#!/bin/bash
 
 echo -e &amp;quot;\033[0;32mDeploying new blog...\033[0m&amp;quot;
+
+echo -e &amp;quot;\033[0;32mDeleting old site...\033[0m&amp;quot;
+rm -rf ~/src/charliegriefer.github.io/posts/
 
 echo -e &amp;quot;\033[0;32mRunning hugo...\033[0m&amp;quot;
 hugo -d ../charliegriefer.github.io

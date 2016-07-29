@@ -185,7 +185,7 @@
 
                 
                     <li>
-                        <a href="http://charliegriefer.github.io/2016/07/29/hugo-on-github-pages/"><p>Hugo on Github Pages</p></a>
+                        <a href="http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/"><p>Hugo on Github Pages</p></a>
                     </li>
                 
             </ul>
@@ -202,7 +202,7 @@
     <header>
     <div class="title">
         
-            <h2><a href="http://charliegriefer.github.io/2016/07/29/hugo-on-github-pages/">Hugo on Github Pages</a></h2>
+            <h2><a href="http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/">Hugo on Github Pages</a></h2>
         
         
             <p>Setting up Hugo to use Github Pages</p>
@@ -230,43 +230,43 @@
             
 
 
-<li><a href="//twitter.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&text=Hugo%20on%20Github%20Pages&via=charliegriefer" target="_blank" class="share-btn twitter">
+<li><a href="//twitter.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&text=Hugo%20on%20Github%20Pages&via=charliegriefer" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
 </a></li>
 
 
-<li><a href="//plus.google.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn google-plus">
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
 </a></li>
 
 
-<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn facebook">
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
 </a></li>
 
 
-<li><a href="//reddit.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn reddit">
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
 </a></li>
 
 
-<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn linkedin">
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn linkedin">
     <i class="fa fa-linkedin"></i>
     <p>LinkedIn</p>
 </a></li>
 
 
-<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn stumbleupon">
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
 </a></li>
 
 
-<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn email">
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
 </a></li>
@@ -308,6 +308,9 @@ on the idea. The notion of a simple, static blog as opposed to the (<em>warning:
 <pre><code>#!/bin/bash
 
 echo -e &quot;\033[0;32mDeploying new blog...\033[0m&quot;
+
+echo -e &quot;\033[0;32mDeleting old site...\033[0m&quot;
+rm -rf ~/src/charliegriefer.github.io/posts/
 
 echo -e &quot;\033[0;32mRunning hugo...\033[0m&quot;
 hugo -d ../charliegriefer.github.io
@@ -382,9 +385,9 @@ echo -e &quot;\033[0;32mDeploy complete.\033[0m&quot;
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'shortname';
-    var disqus_identifier = 'http:\/\/charliegriefer.github.io\/2016\/07\/29\/hugo-on-github-pages\/';
+    var disqus_identifier = 'http:\/\/charliegriefer.github.io\/posts\/2016\/07\/29\/hugo-on-github-pages\/';
     var disqus_title = 'Hugo on Github Pages';
-    var disqus_url = 'http:\/\/charliegriefer.github.io\/2016\/07\/29\/hugo-on-github-pages\/';
+    var disqus_url = 'http:\/\/charliegriefer.github.io\/posts\/2016\/07\/29\/hugo-on-github-pages\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -408,43 +411,43 @@ echo -e &quot;\033[0;32mDeploy complete.\033[0m&quot;
             
 
 
-<li><a href="//twitter.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&text=Hugo%20on%20Github%20Pages&via=charliegriefer" target="_blank" class="share-btn twitter">
+<li><a href="//twitter.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&text=Hugo%20on%20Github%20Pages&via=charliegriefer" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
 </a></li>
 
 
-<li><a href="//plus.google.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn google-plus">
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
 </a></li>
 
 
-<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn facebook">
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
 </a></li>
 
 
-<li><a href="//reddit.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn reddit">
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
 </a></li>
 
 
-<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn linkedin">
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn linkedin">
     <i class="fa fa-linkedin"></i>
     <p>LinkedIn</p>
 </a></li>
 
 
-<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn stumbleupon">
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
 </a></li>
 
 
-<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fcharliegriefer.github.io%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn email">
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
 </a></li>
@@ -562,7 +565,7 @@ echo -e &quot;\033[0;32mDeploy complete.\033[0m&quot;
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://charliegriefer.github.io/2016/07/29/hugo-on-github-pages/">Hugo on Github Pages</a></h3>
+                                <h3><a href="http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/">Hugo on Github Pages</a></h3>
                                 
                                     
                                 
