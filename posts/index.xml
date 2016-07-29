@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Going := the Distance</title>
+    <link>http://charliegriefer.github.io/posts/</link>
+    <description>Recent content in Posts on Going := the Distance</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Jul 2016 19:11:09 -0700</lastBuildDate>
+    <atom:link href="http://charliegriefer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo on Github Pages</title>
+      <link>http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/</link>
+      <pubDate>Fri, 29 Jul 2016 19:11:09 -0700</pubDate>
+      
+      <guid>http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-on-github-pages&#34;&gt;Hugo on Github Pages&lt;/h2&gt;
+
+&lt;p&gt;A couple of years ago, I learned of &lt;a href=&#34;https://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt; and &lt;a href=&#34;https://pages.github.com&#34;&gt;Github Pages&lt;/a&gt;. I was immediately hooked
+on the idea. The notion of a simple, static blog as opposed to the (&lt;em&gt;warning: opinion&lt;/em&gt;) bloated and insecure WordPress option, was incredibly appealing to me. I&amp;rsquo;m not a Ruby person, but Jekyll was fairly straightforward to set up and run locally. Having a free site in the form of Github Pages gave me a place to blog about techie stuff. And of course, it worked seamlessly with Jekyll. I&amp;rsquo;d just upload my Jekyll files, and Github Pages would automatically generate and serve the static pages.&lt;/p&gt;
+
+&lt;p&gt;Fast forward to today. I recently accepted a new position with &lt;a href=&#34;http://www.getwrecked.com&#34;&gt;Wrecking Ball Studio + Labs&lt;/a&gt;, where I&amp;rsquo;ll be learning about and using Google&amp;rsquo;s &lt;a href=&#34;https://golang.org&#34;&gt;Go&lt;/a&gt;. Time to repurpose the blog. And as it turns out, there&amp;rsquo;s a static blog engine written in Go. Time to look at &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At first glance, Hugo&amp;rsquo;s pretty cool, and straightforward to install and run. I appreciate that it&amp;rsquo;s written in the language that I&amp;rsquo;ll be using on a day-to-day basis. I was never a Ruby developer, and recall being frustrated at times dealing with certain Jekyll dependencies (what the hell is a &amp;ldquo;gem&amp;rdquo;, even?). I can get a blog up and running fairly quickly.&lt;/p&gt;
+
+&lt;p&gt;But taking advantage of Github Pages for hosting&amp;hellip; that&amp;rsquo;s where I ran into some obstacles.&lt;/p&gt;
+
+&lt;p&gt;Github Pages and Jekyll were made to work together. I maintained a &lt;a href=&#34;https://github.com/charliegriefer/charliegriefer.github.io&#34;&gt;single repository&lt;/a&gt; where I uploaded the Jekyll source files. Those source files were automagically converted into static pages. Easy peasy.&lt;/p&gt;
+
+&lt;p&gt;Working with Hugo and Github Pages wasn&amp;rsquo;t quite so easy. There are no shortage of Google search results on using Hugo and Github Pages, but the accuracy of the search results seemed to vary wildly. Some suggested that Github Pages would publish static pages that were committed to a &lt;code&gt;gh-pages&lt;/code&gt; branch. This may have been true at one point, and might even still be true today for Project Pages, but is apparently no longer true for User Pages (see &lt;a href=&#34;https://help.github.com/articles/user-organization-and-project-pages/&#34;&gt;https://help.github.com/articles/user-organization-and-project-pages/&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;It became evident that, if I wanted to continue serving up my blog via Github Pages, that I&amp;rsquo;d need to maintain two distinct repositories. &lt;a href=&#34;https://github.com/charliegriefer/hugo-blog&#34;&gt;One for the Hugo source files&lt;/a&gt;, and &lt;a href=&#34;https://github.com/charliegriefer/charliegriefer.github.io&#34;&gt;one for the static pages&lt;/a&gt;. That meant two commits to two repositories. Having gotten used to the single-commit Jekyll method, I wanted to simplify the Hugo process as much as possible.&lt;/p&gt;
+
+&lt;p&gt;I tried declaring the &lt;code&gt;charliegriefer.github.io&lt;/code&gt; repository as a submodule to the &lt;code&gt;hugo-blog&lt;/code&gt; repository, but that turned out to be anything other than simple. This might be due to my lack of familiarity around submodules, but I felt that I was adding more complexity rather than simplifying the process.&lt;/p&gt;
+
+&lt;p&gt;I finally relented and simply let the two repositories live two separate lives. They really do serve two different purposes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/webrat&#34;&gt;Todd Rafferty&lt;/a&gt;, co-worker at Wrecking Ball and all around Go Guru, suggested that he &lt;code&gt;gitignore&lt;/code&gt;s Hugo&amp;rsquo;s &lt;code&gt;public&lt;/code&gt; folder (the folder where the static pages reside), and only commits the Hugo files. He FTPs the static files from the &lt;code&gt;public&lt;/code&gt; folder up to S3 where he hosts them.&lt;/p&gt;
+
+&lt;p&gt;I went a similar route, but I&amp;rsquo;m still hosting up on Github using Github Pages.&lt;/p&gt;
+
+&lt;p&gt;As I work with the Hugo files, they get saved and committed to the &lt;code&gt;hugo-blog&lt;/code&gt; repository. Once I&amp;rsquo;m done, I run the following bash script (which is also saved and committed to the &lt;code&gt;hugo-blog&lt;/code&gt; repository as &lt;code&gt;deploy.sh&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+echo -e &amp;quot;\033[0;32mDeploying new blog...\033[0m&amp;quot;
+
+echo -e &amp;quot;\033[0;32mDeleting old site...\033[0m&amp;quot;
+rm -rf ~/src/charliegriefer.github.io/posts/
+
+echo -e &amp;quot;\033[0;32mRunning hugo...\033[0m&amp;quot;
+hugo -d ../charliegriefer.github.io
+
+echo -e &amp;quot;\033[0;32mChanging to blog directory...\033[0m&amp;quot;
+cd ../charliegriefer.github.io
+
+echo -e &amp;quot;\033[0;32mCommit and push the new build...\033[0m&amp;quot;
+git commit -am &amp;quot;New Blog Build (`date`)&amp;quot;
+git push
+
+echo -e &amp;quot;\033[0;32mChange back to hugo-blog...\033[0m&amp;quot;
+cd ../hugo-blog
+
+echo -e &amp;quot;\033[0;32mDeploy complete.\033[0m&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This gets run from the &lt;code&gt;hugo-blog&lt;/code&gt; directory. When the &lt;code&gt;hugo&lt;/code&gt; command is run, I use the &lt;code&gt;-d&lt;/code&gt; flag to specify that the files are saved one level up to the &lt;code&gt;charliegriefer.github.io&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;From there I commit the files with a static commit message (other than adding a date stamp), and pushing the files to the &lt;code&gt;charliegriefer.github.io&lt;/code&gt; repository.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s still a lot of steps, but I feel better for having hidden them into a single &lt;code&gt;./deploy.sh&lt;/code&gt; command. Cheating? Maybe. But to me it&amp;rsquo;s working smarter and not harder.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

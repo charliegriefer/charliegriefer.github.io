@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>Hugo on Github Pages</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.16" />
+        
+
+
+        
+        
+            <meta name="description" content="Setting up Hugo to use Github Pages">
+        
+
+        
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Hugo on Github Pages"/>
+<meta name="twitter:description" content="Setting up Hugo to use Github Pages"/>
+<meta name="twitter:site" content="@charliegriefer"/>
+
+
+        <meta property="og:title" content="Hugo on Github Pages" />
+<meta property="og:description" content="Setting up Hugo to use Github Pages" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/" />
+
+
+<meta property="og:updated_time" content="2016-07-29T19:11:09-07:00"/>
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Hugo on Github Pages">
+<meta itemprop="description" content="Setting up Hugo to use Github Pages">
+
+
+<meta itemprop="dateModified" content="2016-07-29T19:11:09-07:00" />
+<meta itemprop="wordCount" content="717">
+
+
+
+<meta itemprop="keywords" content="Github Pages,Go,Hugo," />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <link rel="stylesheet" href="/css/main.min.css" />
+                
+            
+        
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="/">Going := The Distance</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/posts">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories">
+                        Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                        About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://charliegriefer.github.io/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://charliegriefer.github.io/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/posts">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            <h3>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/"><p>Hugo on Github Pages</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&text=Hugo%20on%20Github%20Pages&via=charliegriefer" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/">Hugo on Github Pages</a></h1>
+            
+        
+        
+            <p>Setting up Hugo to use Github Pages</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-07-29'>
+            July 29, 2016</time>
+        <span class="author"></span>
+        
+            <p>4 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&text=Hugo%20on%20Github%20Pages&via=charliegriefer" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f&title=Hugo%20on%20Github%20Pages" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fcharliegriefer.github.io%2fposts%2f2016%2f07%2f29%2fhugo-on-github-pages%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+
+    <div id="content">
+        
+
+<h2 id="hugo-on-github-pages">Hugo on Github Pages</h2>
+
+<p>A couple of years ago, I learned of <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://pages.github.com">Github Pages</a>. I was immediately hooked
+on the idea. The notion of a simple, static blog as opposed to the (<em>warning: opinion</em>) bloated and insecure WordPress option, was incredibly appealing to me. I&rsquo;m not a Ruby person, but Jekyll was fairly straightforward to set up and run locally. Having a free site in the form of Github Pages gave me a place to blog about techie stuff. And of course, it worked seamlessly with Jekyll. I&rsquo;d just upload my Jekyll files, and Github Pages would automatically generate and serve the static pages.</p>
+
+<p>Fast forward to today. I recently accepted a new position with <a href="http://www.getwrecked.com">Wrecking Ball Studio + Labs</a>, where I&rsquo;ll be learning about and using Google&rsquo;s <a href="https://golang.org">Go</a>. Time to repurpose the blog. And as it turns out, there&rsquo;s a static blog engine written in Go. Time to look at <a href="https://gohugo.io">Hugo</a>.</p>
+
+<p>At first glance, Hugo&rsquo;s pretty cool, and straightforward to install and run. I appreciate that it&rsquo;s written in the language that I&rsquo;ll be using on a day-to-day basis. I was never a Ruby developer, and recall being frustrated at times dealing with certain Jekyll dependencies (what the hell is a &ldquo;gem&rdquo;, even?). I can get a blog up and running fairly quickly.</p>
+
+<p>But taking advantage of Github Pages for hosting&hellip; that&rsquo;s where I ran into some obstacles.</p>
+
+<p>Github Pages and Jekyll were made to work together. I maintained a <a href="https://github.com/charliegriefer/charliegriefer.github.io">single repository</a> where I uploaded the Jekyll source files. Those source files were automagically converted into static pages. Easy peasy.</p>
+
+<p>Working with Hugo and Github Pages wasn&rsquo;t quite so easy. There are no shortage of Google search results on using Hugo and Github Pages, but the accuracy of the search results seemed to vary wildly. Some suggested that Github Pages would publish static pages that were committed to a <code>gh-pages</code> branch. This may have been true at one point, and might even still be true today for Project Pages, but is apparently no longer true for User Pages (see <a href="https://help.github.com/articles/user-organization-and-project-pages/">https://help.github.com/articles/user-organization-and-project-pages/</a>).</p>
+
+<p>It became evident that, if I wanted to continue serving up my blog via Github Pages, that I&rsquo;d need to maintain two distinct repositories. <a href="https://github.com/charliegriefer/hugo-blog">One for the Hugo source files</a>, and <a href="https://github.com/charliegriefer/charliegriefer.github.io">one for the static pages</a>. That meant two commits to two repositories. Having gotten used to the single-commit Jekyll method, I wanted to simplify the Hugo process as much as possible.</p>
+
+<p>I tried declaring the <code>charliegriefer.github.io</code> repository as a submodule to the <code>hugo-blog</code> repository, but that turned out to be anything other than simple. This might be due to my lack of familiarity around submodules, but I felt that I was adding more complexity rather than simplifying the process.</p>
+
+<p>I finally relented and simply let the two repositories live two separate lives. They really do serve two different purposes.</p>
+
+<p><a href="https://twitter.com/webrat">Todd Rafferty</a>, co-worker at Wrecking Ball and all around Go Guru, suggested that he <code>gitignore</code>s Hugo&rsquo;s <code>public</code> folder (the folder where the static pages reside), and only commits the Hugo files. He FTPs the static files from the <code>public</code> folder up to S3 where he hosts them.</p>
+
+<p>I went a similar route, but I&rsquo;m still hosting up on Github using Github Pages.</p>
+
+<p>As I work with the Hugo files, they get saved and committed to the <code>hugo-blog</code> repository. Once I&rsquo;m done, I run the following bash script (which is also saved and committed to the <code>hugo-blog</code> repository as <code>deploy.sh</code>):</p>
+
+<pre><code>#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying new blog...\033[0m&quot;
+
+echo -e &quot;\033[0;32mDeleting old site...\033[0m&quot;
+rm -rf ~/src/charliegriefer.github.io/posts/
+
+echo -e &quot;\033[0;32mRunning hugo...\033[0m&quot;
+hugo -d ../charliegriefer.github.io
+
+echo -e &quot;\033[0;32mChanging to blog directory...\033[0m&quot;
+cd ../charliegriefer.github.io
+
+echo -e &quot;\033[0;32mCommit and push the new build...\033[0m&quot;
+git commit -am &quot;New Blog Build (`date`)&quot;
+git push
+
+echo -e &quot;\033[0;32mChange back to hugo-blog...\033[0m&quot;
+cd ../hugo-blog
+
+echo -e &quot;\033[0;32mDeploy complete.\033[0m&quot;
+</code></pre>
+
+<p>This gets run from the <code>hugo-blog</code> directory. When the <code>hugo</code> command is run, I use the <code>-d</code> flag to specify that the files are saved one level up to the <code>charliegriefer.github.io</code> directory.</p>
+
+<p>From there I commit the files with a static commit message (other than adding a date stamp), and pushing the files to the <code>charliegriefer.github.io</code> repository.</p>
+
+<p>It&rsquo;s still a lot of steps, but I feel better for having hidden them into a single <code>./deploy.sh</code> command. Cheating? Maybe. But to me it&rsquo;s working smarter and not harder.</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categorieshugo'>Hugo</a></li>
+    
+        <li><a href='/categoriesgithub-pages'>Github Pages</a></li>
+    
+        <li><a href='/categoriesgo'>Go</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'shortname';
+    var disqus_identifier = 'http:\/\/charliegriefer.github.io\/posts\/2016\/07\/29\/hugo-on-github-pages\/';
+    var disqus_title = 'Hugo on Github Pages';
+    var disqus_url = 'http:\/\/charliegriefer.github.io\/posts\/2016\/07\/29\/hugo-on-github-pages\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <img src="/img/main/charlie.png" class="intro-circle" width="" alt="It&#39;s Charlie" />
+                
+            
+            
+                <header>
+                    <h2>Going := The Distance</h2>
+                    <p><em>"Going in one more round when you don't think you can - that's what makes all the difference in your life"</em> - Rocky Balboa</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/charliegriefer" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/charliegriefer" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+<li><a href="//reddit.com/user/charliegriefer" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/charliegriefer" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+<li><a href="mailto:charlie@griefer.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://charliegriefer.github.io/posts/2016/07/29/hugo-on-github-pages/">Hugo on Github Pages</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-07-29'>
+                                    July 29, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/github-pages/">Github Pages</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/go/">Go</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/hugo/">Hugo</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>&#34;We have two lives, and the second begins when we realize we only have one.&#34; - Confucius</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/charliegriefer" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/charliegriefer" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+<li><a href="//reddit.com/user/charliegriefer" target="_blank" title="Reddit" class="fa fa-reddit"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/charliegriefer" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+<li><a href="mailto:charlie@griefer.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Going := the Distance. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <script src="/js/main.min.js"></script>
+                
+            
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+
